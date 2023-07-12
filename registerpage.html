@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="registerpage.css" />
+    <title>Geo.ge</title>
+  </head>
+  <body>
+    <img
+      src="fotoebi/regiter-background.jpg"
+      alt="register-page-bacground"
+      class="background-img"
+    />
+
+    <nav class="nav">
+      <a href="index.html" class="logo-a">
+        <article class="logo">
+          <img class="logo-image" src="fotoebi/geo-logo.png" alt="logo-image" />
+          <span class="logo-text">Geo.ge</span>
+        </article>
+      </a>
+      <div class="nav-end">
+        <article class="Shesvla-article" id="ShesvlaArticleJs">
+          <button
+            type="button"
+            onclick="getFocus()"
+            class="nav-end-a Shesvla-bottom"
+          >
+            შესვლა
+          </button>
+        </article>
+        <article class="registracia-article">
+          <a href="registerpage.html" class="nav-end-a">რეგისტრაცია</a>
+        </article>
+      </div>
+    </nav>
+    <main class="main">
+      <div class="registration-cont">
+        <article class="h1-conteiner">
+          <h1 class="h1">რეგისტრაცია</h1>
+          <p class="h1-paragraf">პროცესი სწრაფი და მარტივია</p>
+        </article>
+        <form
+          action="registration"
+          method="post"
+          class="registration-cont-line"
+        >
+          <article class="input-cont input-cont1">
+            <label for="InputSaxeli" class="labels">სახელი</label>
+            <input
+              type="text"
+              name="input-saxeli"
+              id="InputSaxeli"
+              class="inputs"
+            />
+          </article>
+          <article class="input-cont input-cont2">
+            <label for="InputGvari" class="labels">გვარი</label>
+            <input
+              type="text"
+              name="input-gvari"
+              id="InputGvari"
+              class="inputs"
+            />
+          </article>
+          <article class="input-cont input-cont3">
+            <label for="InputMomxmarebeli" class="labels">მომხმარებელი</label>
+            <input
+              type="text"
+              name="input-momxmarebeli"
+              id="InputMomxmarebeli"
+              class="inputs"
+            />
+          </article>
+          <article class="input-cont input-cont4">
+            <label for="InputElfosta" class="labels">ელ-ფოსტა</label>
+            <input
+              type="email"
+              name="input-elfosta"
+              id="InputElfosta"
+              class="inputs"
+            />
+          </article>
+          <article class="input-cont input-cont5">
+            <label for="InputPasword" class="labels">პაროლი</label>
+            <input
+              type="password"
+              name="input-paroli"
+              id="InputPasword"
+              class="inputs"
+            />
+          </article>
+          <article class="input-cont input-cont6">
+            <label for="InputAgainPassword" class="labels"
+              >გაიმეორეთ პაროლი</label
+            >
+            <input
+              type="password"
+              name="input-again-password"
+              id="InputAgainPassword"
+              class="inputs"
+            />
+          </article>
+          <div class="chackbox-end-article">
+            <input type="checkbox" class="checkbox" name="chackbox-end" />
+            <article class="checkbox-paragrafAnda">
+              <p class="chackbox-end-paragraf">
+                ღილაკზე „რეგისტრაცია“ დაწკაპუნებით, თქვენ დაეთანხმებით ჩვენს
+              </p>
+              <a href="#" class="chackbox-end-a">მოხმარების წესები</a> "&"
+              <a href="#" class="chackbox-end-a">კონფიდენციალობის პოლიტიკა</a>
+            </article>
+          </div>
+          <article class="botton-registration-cont">
+            <button
+              type="submit"
+              name="botton-for-registration"
+              class="botton-registration"
+              id="registrationSubmit"
+            >
+              რეგისტრაცია
+            </button>
+          </article>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

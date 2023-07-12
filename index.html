@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
     <title>Geo.ge</title>
   </head>
   <body>
@@ -17,15 +18,17 @@
                 </article>
             </a>
             <div class="nav-end">
-                <article class="Shesvla-article">
-                    <span class="nav-end-span">შესვლა</span>
+                <article class=" Shesvla-article" id="ShesvlaArticleJs">
+                  
+                    <button type="button" onclick="getFocus()"  class="nav-end-a Shesvla-bottom" >შესვლა</button>
                 </article>
                 <article class="registracia-article">
-                    <span class="nav-end-span">რეგისტრაცია</span>
+                    <a href="registerpage.html" class="nav-end-a">რეგისტრაცია</a>
                 </article>
             </div>
         </nav>
     </section>
+    <div class="wre-blur"></div>
         <div class="left-siteinfo-right-shesvla">
             <article class="site-info">
                 <h1 class="h1"> <span class="geo-ge-span">Geo.ge</span>  - ქართული სოციალური საიტი</h1>
@@ -39,14 +42,16 @@
                     <label for="PasswordUserId" class="label">შეიყვანეთ პაროლი</label>
                     <input type="password" name="password-user" class="input-password input" id="PasswordUserId" required>
                     <article class="botton-flex-cont">
-                        <button type="submit"  class="botton"> შესვლა</button>
-                        <button class="botton"> დაგავიწყდა პაროლი?</button>
+                        <button type="submit"  class="botton-Shesvla"> შესვლა</button>
+                       <a href="#" class="booton-dagaviwyda-paroli">დაგავიწყდა პაროლი?</a>
                     </article>
                     
                 </form>
-               
+                
             </div>
+            
         </div>
+        
     </main>
    
     </svg>

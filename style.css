@@ -6,7 +6,7 @@
 
 body {
   /* background: rgb(71, 71, 134); */
-  background: linear-gradient(rgb(71, 71, 134) 40%, #191718 100%);
+  background: linear-gradient(rgb(71, 71, 134) 40%, rgb(176, 141, 231) 100%);
 }
 
 .main {
@@ -18,7 +18,6 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 50px;
-  /* position: relative; */
 }
 
 .fixed-section {
@@ -27,6 +26,7 @@ body {
   width: 89.5%;
   background: rgb(71, 71, 134);
   height: 120px;
+  z-index: 100;
 }
 
 .nav {
@@ -37,7 +37,7 @@ body {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  /* position: fixed; */
+  position: relative;
 }
 
 .logo-image {
@@ -68,12 +68,12 @@ body {
   column-gap: 50px;
 }
 
-.Shesvla-article {
+.Shesvla-bottom {
   border: solid rgb(176, 141, 231);
-
+  background-color: rgb(71, 71, 134);
   border-radius: 10px;
   width: 100px;
-  height: 40px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,24 +84,25 @@ body {
   border: solid rgb(176, 141, 231);
   border-radius: 10px;
   width: 150px;
-  height: 40px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 
-.nav-end-span {
+.nav-end-a {
   color: rgb(184, 215, 240);
-  font-size: 20px;
+  font-size: 15px;
+  text-decoration: none;
 }
 
-.Shesvla-article:hover {
+.Shesvla-bottom:hover {
   background-color: rgb(176, 141, 231);
   transition: 0.3s;
 }
 
-.Shesvla-article:hover > .nav-end-span {
+.Shesvla-article:hover > .nav-end-a {
   color: black;
   transition: 0.3s;
 }
@@ -111,14 +112,24 @@ body {
   transition: 0.3s;
 }
 
-.registracia-article:hover > .nav-end-span {
+.registracia-article:hover > .nav-end-a {
   color: black;
   transition: 0.3s;
 }
 
+.wre-blur {
+  position: absolute;
+
+  box-shadow: 10px 0px 250px 200px rgb(255, 255, 61);
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  z-index: 101;
+}
+
 .left-siteinfo-right-shesvla {
   display: flex;
-  border: solid rgb(7, 212, 106);
+  /* border: solid rgb(7, 212, 106); */
   column-gap: 50px;
   width: 95%;
   margin: 200px auto;
@@ -126,7 +137,7 @@ body {
 
 .site-info {
   height: 200px;
-  border: solid;
+  /* border: solid; */
   width: 100%;
 }
 
@@ -171,7 +182,7 @@ body {
   background-color: rgb(184, 215, 240);
   width: 100%;
   height: 40px;
-  font-size: 20px;
+
   color: blueviolet;
   font-family: sans-serif;
   border: none;
@@ -187,12 +198,27 @@ input:focus {
 
 .botton-flex-cont {
   display: flex;
-  column-gap: 100px;
+  column-gap: 50px;
   justify-content: center;
 }
-/* 
-.botton {
+
+.botton-Shesvla {
   width: 100px;
   height: 30px;
-  background-color: blueviolet;
-} */
+  border: solid rgb(176, 141, 231);
+  border-radius: 10px;
+  background-color: rgb(71, 71, 134);
+  cursor: pointer;
+  color: rgb(184, 215, 240);
+}
+
+.botton-Shesvla:hover {
+  background-color: rgb(176, 141, 231);
+  transition: 0.3s;
+  color: black;
+}
+
+.booton-dagaviwyda-paroli {
+  text-decoration: none;
+  color: rgb(184, 215, 240);
+}
