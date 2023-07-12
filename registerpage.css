@@ -245,17 +245,16 @@
   color: rgb(184, 215, 240);
   border: none;
   cursor: pointer;
+  width: 150px;
+  height: 37px;
+  border: solid rgb(176, 141, 231);
+  border-radius: 10px;
 }
 
-.botton-registration-cont {
-  background-color: rgb(63, 63, 128);
-  border: solid rgb(176, 141, 231);
-  width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  cursor: pointer;
+.botton-registration:hover {
+  background-color: rgb(176, 141, 231);
+  transition: 0.3s;
+  color: black;
 }
 
 /*დასამატებელია შესვლა ღილაკზე დაჭერით პირველ ფაილზე გადასვლა და შევლის ველის მონიშვნა */
