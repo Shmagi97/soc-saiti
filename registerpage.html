@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async defer src="registerpage.js"></script>
     <link rel="stylesheet" href="registerpage.css" />
     <title>Geo.ge</title>
   </head>
@@ -15,7 +16,7 @@
 
     <nav class="nav">
       <a href="index.html" class="logo-a">
-        <article class="logo">
+        <article class="logo" id="logoJs">
           <img class="logo-image" src="fotoebi/geo-logo.png" alt="logo-image" />
           <span class="logo-text">Geo.ge</span>
         </article>
@@ -24,14 +25,15 @@
         <article class="Shesvla-article" id="ShesvlaArticleJs">
           <button
             type="button"
-            onclick="getFocus()"
             class="nav-end-a Shesvla-bottom"
+            onclick="getFocusRegitrationHtml()"
+            id="regiterPageBotton"
           >
             შესვლა
           </button>
         </article>
-        <article class="registracia-article">
-          <a href="registerpage.html" class="nav-end-a">რეგისტრაცია</a>
+        <article class="registracia-article" id="registrationJs">
+          <a href="#" class="nav-end-a">რეგისტრაცია</a>
         </article>
       </div>
     </nav>
@@ -103,7 +105,15 @@
             />
           </article>
           <div class="chackbox-end-article">
-            <input type="checkbox" class="checkbox" name="chackbox-end" />
+            <label for="checkboxJs" class="checkbox-label">
+              <input
+                type="checkbox"
+                class="checkbox"
+                name="chackbox-end"
+                id="checkboxJs"
+              />
+              <span class="checkbox-span"></span>
+            </label>
             <article class="checkbox-paragrafAnda">
               <p class="chackbox-end-paragraf">
                 ღილაკზე „რეგისტრაცია“ დაწკაპუნებით, თქვენ დაეთანხმებით ჩვენს

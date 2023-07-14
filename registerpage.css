@@ -6,7 +6,7 @@
 
 .background-img {
   width: 100%;
-  height: 800px;
+  height: 100%;
   position: absolute;
   object-fit: cover;
   z-index: 1;
@@ -212,7 +212,7 @@
 
   min-height: 10px;
   align-items: start;
-  column-gap: 20px;
+  column-gap: 30px;
   /* border: solid red; */
   color: rgb(255, 0, 0);
 }
@@ -257,4 +257,66 @@
   color: black;
 }
 
+/* checkbox-is gastilva */
+
+.checkbox-label {
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+.checkbox-span {
+  position: absolute;
+  border: solid rgb(176, 141, 231);
+  left: 0;
+  top: 0;
+  height: 16px;
+  width: 16px;
+}
+
+.checkbox-span:hover {
+  background-color: rgb(176, 141, 231);
+}
+
+.checkbox:checked ~ .checkbox-span {
+  background-color: rgb(176, 141, 231);
+}
+
+.checkbox-span::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox:checked ~ .checkbox-span::after {
+  display: block;
+}
+
+.checkbox-span::after {
+  left: 1px;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  border: solid red;
+  border-width: 0 3.5px 3.5px 0;
+  transform: rotate(45deg);
+}
+
 /*დასამატებელია შესვლა ღილაკზე დაჭერით პირველ ფაილზე გადასვლა და შევლის ველის მონიშვნა */
+
+.indexFrame {
+  position: absolute;
+}
+
+#indexFrameJs {
+  position: absolute;
+}

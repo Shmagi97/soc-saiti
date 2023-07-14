@@ -11,9 +11,9 @@ body {
 
 .main {
   width: 90%;
-  height: 900px;
+  height: 700px;
   background: rgb(71, 71, 134);
-  border: solid red;
+  /* border: solid red; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -44,6 +44,7 @@ body {
   width: 50px;
   height: 45px;
   border-radius: 50%;
+  box-shadow: 20px 13px 10px 6px black;
 }
 
 .logo-a {
@@ -78,6 +79,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-shadow: 20px 3px 30px black;
 }
 
 .registracia-article {
@@ -89,6 +91,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-shadow: 20px 3px 30px black;
 }
 
 .nav-end-a {
@@ -143,6 +146,9 @@ body {
 
 .geo-ge-span {
   color: rgb(184, 215, 240);
+  box-shadow: 10px 13px 10px black;
+  border-radius: 10px;
+  border: solid rgb(176, 141, 231);
 }
 
 .h1 {
@@ -164,6 +170,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 20px 15px 30px black;
 }
 
 .shesvla-article-sistem-line {
