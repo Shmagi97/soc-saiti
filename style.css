@@ -79,7 +79,6 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 20px 3px 30px black;
 }
 
 .registracia-article {
@@ -91,7 +90,6 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 20px 3px 30px black;
 }
 
 .nav-end-a {
@@ -105,18 +103,13 @@ body {
   transition: 0.3s;
 }
 
-.Shesvla-article:hover > .nav-end-a {
+.nav-end-a:hover {
   color: black;
   transition: 0.3s;
 }
 
 .registracia-article:hover {
   background-color: rgb(176, 141, 231);
-  transition: 0.3s;
-}
-
-.registracia-article:hover > .nav-end-a {
-  color: black;
   transition: 0.3s;
 }
 
@@ -170,7 +163,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 20px 15px 30px black;
 }
 
 .shesvla-article-sistem-line {
