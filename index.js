@@ -8,5 +8,5 @@
 // });
 
 function getFocus() {
-  document.getElementById("EmailUserId").focus();
+  document.getElementById("version2Input.js").focus();
 }
