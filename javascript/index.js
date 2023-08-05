@@ -16,3 +16,7 @@ function getFocus() {
   loginVersion2Section.style.display = "block";
   shesvlaArticleSistemLine.style.display = "none";
 }
+
+// var x = 30;
+// var y = x < 25 ? x - 5 : x + 5;
+// console.log(y);

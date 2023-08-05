@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script async defer src="registerpage.js"></script>
-    <link rel="stylesheet" href="registerpage.css" />
+    <script async defer src="javascript/registerpage.js"></script>
+    <link rel="stylesheet" href="css/registerpage.css" />
+
     <title>Geo.ge</title>
   </head>
   <body>
@@ -26,7 +27,7 @@
           <button
             type="button"
             class="nav-end-a Shesvla-bottom"
-            onclick="getFocusRegitrationHtml()"
+            onclick="loginPage()"
             id="regiterPageBotton"
           >
             შესვლა
@@ -44,6 +45,7 @@
           <p class="h1-paragraf">პროცესი სწრაფი და მარტივია</p>
         </article>
         <form
+          id="registerForm"
           action="registration"
           method="post"
           class="registration-cont-line"
@@ -56,6 +58,9 @@
               id="InputSaxeli"
               class="inputs"
             />
+            <span class="input-span"></span>
+            <span class="input-span-2"></span>
+            <span class="input-span-3"></span>
           </article>
           <article class="input-cont input-cont2">
             <label for="InputGvari" class="labels">გვარი</label>
@@ -65,6 +70,9 @@
               id="InputGvari"
               class="inputs"
             />
+            <span class="input-span"></span>
+            <span class="input-span-2"></span>
+            <span class="input-span-3"></span>
           </article>
           <article class="input-cont input-cont3">
             <label for="InputMomxmarebeli" class="labels">მომხმარებელი</label>
@@ -74,6 +82,9 @@
               id="InputMomxmarebeli"
               class="inputs"
             />
+            <span class="input-span"></span>
+            <span class="input-span-2"></span>
+            <span class="input-span-3"></span>
           </article>
           <article class="input-cont input-cont4">
             <label for="InputElfosta" class="labels">ელ-ფოსტა</label>
@@ -83,6 +94,7 @@
               id="InputElfosta"
               class="inputs"
             />
+            <span class="input-span"></span>
           </article>
           <article class="input-cont input-cont5">
             <label for="InputPasword" class="labels">პაროლი</label>
@@ -92,6 +104,7 @@
               id="InputPasword"
               class="inputs"
             />
+            <span class="input-span"></span>
           </article>
           <article class="input-cont input-cont6">
             <label for="InputAgainPassword" class="labels"
@@ -103,6 +116,7 @@
               id="InputAgainPassword"
               class="inputs"
             />
+            <span class="input-span"></span>
           </article>
           <div class="chackbox-end-article">
             <label for="checkboxJs" class="checkbox-label">
@@ -132,7 +146,7 @@
             რეგისტრაცია
           </button>
         </form>
-        <button id="registrationSubmit1">sacdeli</button>
+        <!-- <button id="registrationSubmit1">sacdeli</button> -->
       </div>
     </main>
   </body>
