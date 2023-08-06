@@ -258,6 +258,17 @@
   font-size: 15px;
 }
 
+.input-span-4 {
+  position: absolute;
+  top: 65px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgb(2, 255, 2);
+  opacity: 20%;
+  left: 40px;
+}
+
 .input-span-after-active {
   content: "";
   position: absolute;
@@ -285,6 +296,21 @@
   opacity: 100%;
   top: 65px;
   left: 20px;
+}
+
+.input-span-after-active-4 {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 1px;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(2, 255, 2);
+  border-radius: 50%;
+  opacity: 100%;
+  top: 65px;
+  left: 40px;
 }
 
 .chackbox-end-article {
