@@ -9,44 +9,6 @@
 //   };
 // });
 
-// const registrationFocus = document.getElementById("registrationJs");
-// registrationFocus.addEventListener("click", () => {
-//   document.getElementById("InputSaxeli").focus();
-// });
-
-// const sheyvaniliTexti = [];
-
-// const registrationSubmitButton = document.getElementById("registrationSubmit1");
-
-// registrationSubmitButton.addEventListener("click", () => {
-//   const inputValue = document.getElementById("InputSaxeli");
-//   const inputSaxeliSheyvanili = inputValue.value;
-//   sheyvaniliTexti.push(inputSaxeliSheyvanili);
-//   console.log(sheyvaniliTexti);
-// });
-
-// const sheyvaniliNumber = [];
-
-// registrationSubmitButton.addEventListener("click", () => {
-//   const inputNumber = document.getElementById("InputGvari");
-//   const inputValue = document.getElementById("InputSaxeli");
-
-//   const inputNumberValue = parseInt(inputNumber.value);
-//   const inputSaxeliSheyvanili = inputValue.value;
-
-//   if (!isNaN(inputNumberValue)) {
-//     sheyvaniliTexti.push(inputNumberValue);
-//     console.log(sheyvaniliTexti);
-//   } else {
-//     sheyvaniliTexti.push(inputSaxeliSheyvanili);
-//     console.log(sheyvaniliTexti);
-//   }
-
-//   sheyvaniliTexti.push(inputNumberValue);
-//   sheyvaniliTexti.push(inputSaxeliSheyvanili);
-//   console.log(sheyvaniliTexti);
-// });
-
 function loginPage() {
   window.location = "index.html";
 }
@@ -68,43 +30,47 @@ registerPageBotton.addEventListener("click", () => {
   inputSpans[0].classList.remove("input-span-after-active");
 });
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// ინდექსით 0 და 1 ფორიჩ მეთოდით სტილების მინიჭება
 
-const spansarray3 = Array.from(inputSpans3);
-const filterSpan3 = spansarray3.filter((span3, index) => {
-  return index !== 3 && index !== 1 && index !== 0;
+inputSpans2[0].style.display = "none";
+inputSpans2[1].style.display = "none";
+inputSpans4[0].style.display = "none";
+inputSpans4[1].style.display = "none";
+inputSpans4[3].style.display = "none";
+
+const inputsArrayNames = Array.from(inputsJs);
+const sliceArrayNames = inputsArrayNames.slice(0, 2);
+
+sliceArrayNames.forEach((btn, index) => {
+  const spansArray3 = Array.from(inputSpans3);
+  const sliceSpanArray3 = spansArray3.slice(0, 2);
+  const spansArray = Array.from(inputSpans);
+  const sliceSpanArray = spansArray.slice(0, 2);
+  btn.addEventListener("input", (testCarieli, testMaxSimbol) => {
+    testCarieli = /^\s*$/.test(btn.value);
+    testMaxSimbol = /^.{0,30}$/.test(btn.value);
+
+    if (testCarieli) {
+      sliceSpanArray3[index].innerText = "შეავსეთ, ველი ცარიელია";
+      sliceSpanArray[index].classList.remove("input-span-after-active");
+      return false;
+    } else if (!testCarieli) {
+      sliceSpanArray3[index].innerText = "";
+      sliceSpanArray[index].classList.add("input-span-after-active");
+    }
+
+    if (!testMaxSimbol) {
+      sliceSpanArray3[index].innerText = 'მაქსიმუმ "30" სიმბოლო';
+      return false;
+    } else if (testMaxSimbol) {
+      sliceSpanArray3[index].innerText = "";
+      return true;
+    }
+  });
 });
 
-// chaanacvle forichi am sintaqsit
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-// inputsJs.forEach((btn, index) => {
-//   btn.addEventListener("input", () => {
-//     const testCarieli = /^\s*$/.test(btn.value);
-//     const testMaxSimbol = !/^.{0,30}$/.test(btn.value);
-
-//     if (testCarieli) {
-//       inputSpans3[index].innerText = "შეავსეთ, ველი ცარიელია";
-//       inputSpans[index].classList.remove("input-span-after-active");
-//       // inputSpans2[index].classList.remove("input-span-after-active-2");
-
-//       return false;
-//     } else if (testMaxSimbol) {
-//       inputSpans3[index].innerText = 'მაქსიმუმ "30" სიმბოლო';
-//       inputSpans[index].classList.remove("input-span-after-active");
-//       // inputSpans2[index].classList.remove("input-span-after-active-2");
-
-//       return false;
-//     } else {
-//       inputSpans3[index].innerText = "";
-//       inputSpans3[index].innerText = "";
-//       inputSpans[index].classList.add("input-span-after-active");
-//       // inputSpans2[index].classList.add("input-span-after-active-2");
-
-//       return true;
-//     }
-//   });
-// });
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// ინდექსით 2. ფუნქციით სტილების მინიჭება
 
 function inputMailFn() {
   const conteinMail = !/@gmail\.com/.test(inputsJs[3].value);
@@ -130,103 +96,74 @@ function inputMailFn() {
 }
 inputsJs[3].addEventListener("input", inputMailFn);
 
-const iputsArray = Array.from(inputsJs);
-const filteredInputs = iputsArray.filter((input, index) => {
-  return index !== 3 && index !== 1 && index !== 0;
-});
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// ინდექსით 2 , 4 და 5 ფორიჩ მეთოდით სტილების მინიჭება
 
-filteredInputs.forEach((btn, index) => {
-  const spansarray3 = Array.from(inputSpans3);
-  const filterSpan3 = spansarray3.filter((span3, index) => {
-    return index !== 3 && index !== 1 && index !== 0;
-  });
-  const spansarray2 = Array.from(inputSpans2);
-  const filterSpan2 = spansarray2.filter((span2, index) => {
-    return index !== 3 && index !== 1 && index !== 0;
-  });
+const iputsArraySac = Array.from(inputsJs);
+const ChangeMasivSlice = iputsArraySac.slice(2, 6);
+const ChangeMasivSplice = ChangeMasivSlice.splice(1, 1);
+
+ChangeMasivSlice.forEach((btn, index) => {
+  const spansArray2 = Array.from(inputSpans2);
+  const spansArray2Slice = spansArray2.slice(2, 6);
+  const spansArray2Splice = spansArray2Slice.splice(1, 1);
+
+  const spansArray3 = Array.from(inputSpans3);
+  const spansArray3Slice = spansArray3.slice(2, 6);
+  const spansArray3Splice = spansArray3Slice.splice(1, 1);
+
   const spansarray4 = Array.from(inputSpans4);
-  const filterSpan4 = spansarray4.filter((span4, index) => {
-    return index !== 3 && index !== 1 && index !== 0;
-  });
+  const spansArray4Slice = spansarray4.slice(2, 6);
+  const spansArray4Splice = spansArray4Slice.splice(1, 1);
+
   const spansarray = Array.from(inputSpans);
-  const filterSpan = spansarray.filter((span2, index) => {
-    return index !== 3 && index !== 1 && index !== 0;
-  });
+  const spansArraySlice = spansarray.slice(2, 6);
+  const spansArraySplice = spansArraySlice.splice(1, 1);
+
   btn.addEventListener("input", () => {
     const testCarieli = /^\s*$/.test(btn.value);
     const containsNumber = /[0-9]/.test(btn.value);
     const containsBigLetters = /[A-Z]/.test(btn.value);
 
     if (testCarieli) {
-      filterSpan3[index].innerText = "შეავსეთ, ველი ცარიელია";
-      filterSpan2[index].classList.remove("input-span-after-active-2");
-      filterSpan4[index].classList.remove("input-span-after-active-4");
-      filterSpan[index].classList.remove("input-span-after-active");
+      spansArray3Slice[index].innerText = "შეავსეთ, ველი ცარიელია";
+      spansArray2Slice[index].classList.remove("input-span-after-active-2");
+      spansArray4Slice[index].classList.remove("input-span-after-active-4");
+      spansArraySlice[index].classList.remove("input-span-after-active");
 
       return false;
     } else if (!testCarieli) {
-      filterSpan[index].classList.add("input-span-after-active");
+      spansArray3Slice[index].innerText = "";
+      spansArraySlice[index].classList.add("input-span-after-active");
     }
+
     if (!containsNumber) {
-      filterSpan3[index].innerText = "არ შეიცავს ციფრებს [0-9]";
-      filterSpan2[index].classList.remove("input-span-after-active-2");
+      spansArray3Slice[index].innerText = "არ შეიცავს ციფრებს [0-9]";
+      spansArray2Slice[index].classList.remove("input-span-after-active-2");
 
       return false;
     } else if (containsNumber) {
-      filterSpan3[index].innerText = "";
-      filterSpan2[index].classList.add("input-span-after-active-2");
+      spansArray3Slice[index].innerText = "";
+      spansArray2Slice[index].classList.add("input-span-after-active-2");
     }
 
     if (!containsBigLetters) {
-      filterSpan3[index].innerText = "არ შეიცავს ასოებს [A-Z]";
-      filterSpan4[index].classList.remove("input-span-after-active-4");
-      console.log(!containsBigLetters, "didi asoebi !");
+      spansArray3Slice[index].innerText = "არ შეიცავს ასოებს [A-Z]";
+      spansArray4Slice[index].classList.remove("input-span-after-active-4");
+
       return false;
     } else if (containsBigLetters) {
-      filterSpan3[index].innerText = "";
-      filterSpan4[index].classList.add("input-span-after-active-4");
+      spansArray3Slice[index].innerText = "";
+      spansArray4Slice[index].classList.add("input-span-after-active-4");
 
       return true;
     }
   });
 });
-// console.log(filteredInputs);
 
-// function nikName(
-//   containsNumberNikName,
-//   containsNumberPassword,
-//   containsNumberAgainPassword,
-//   test2
-// ) {
-//   containsNumberNikName = !/[0-9]/.test(inputsJs[2].value);
-//   test2 = !/[A-Z]/.test(inputsJs[2].value);
-
-//   if (containsNumber) {
-//     inputSpans3[2].innerText = "აუცილებელია შეიცავდეს ციფრებს [0-9]";
-//     inputSpans[2].classList.remove("input-span-after-active");
-//     return false;
-//   } else if (test2) {
-//     inputSpans3[2].innerText = "აუცილებელია დიდი ასოები ";
-//   } else {
-//     inputSpans2[2].classList.add("input-span-after-active-2");
-//     return true;
-//   }
-// }
-
-// inputsJs[2].addEventListener("input", nikName);
-
-// console.log(inputSpans2);
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// საბმით, სერვერზე გასატანი ინფორმაცია
 
 formHtml.addEventListener("submit", (element) => {
   element.preventDefault();
 });
-
-// } else if (containsNumber) {
-//   inputSpans3[2].innerText = "აუცილებელია შეიცავდეს ციფრებს [0-9]";
-//   // inputSpans[2].classList.remove("input-span-after-active");
-//   inputSpans2[index].classList.remove("input-span-after-active-2");
-//   return false;
-// } else if (containsBigLetters) {
-//   inputSpans3[2].innerText = "აუცილებელია დიდი ასოები ";
-//   inputSpans2[index].classList.remove("input-span-after-active-2");
-//   return false;
