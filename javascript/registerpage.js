@@ -166,4 +166,32 @@ ChangeMasivSlice.forEach((btn, index) => {
 
 formHtml.addEventListener("submit", (element) => {
   element.preventDefault();
+  formHtml.reset();
+  ChangeMasivSlice.forEach((el, index) => {
+    const spansArray2 = Array.from(inputSpans2);
+    const spansArray2Slice = spansArray2.slice(2, 6);
+    const spansArray2Splice = spansArray2Slice.splice(1, 1);
+
+    const spansarray4 = Array.from(inputSpans4);
+    const spansArray4Slice = spansarray4.slice(2, 6);
+    const spansArray4Splice = spansArray4Slice.splice(1, 1);
+
+    const spansarray = Array.from(inputSpans);
+    const spansArraySlice = spansarray.slice(2, 6);
+    const spansArraySplice = spansArraySlice.splice(1, 1);
+
+    spansArray4Slice[index].classList.remove("input-span-after-active-4");
+    spansArray2Slice[index].classList.remove("input-span-after-active-2");
+    spansArraySlice[index].classList.remove("input-span-after-active");
+  });
+
+  sliceArrayNames.forEach((el, index) => {
+    const spansArray = Array.from(inputSpans);
+    const sliceSpanArray = spansArray.slice(0, 2);
+
+    sliceSpanArray[index].classList.remove("input-span-after-active");
+  });
+
+  inputSpans[3].classList.remove("input-span-after-active");
+  inputSpans2[3].classList.remove("input-span-after-active-2");
 });
